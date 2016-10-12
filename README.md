@@ -20,7 +20,7 @@ This tool wraps around `mender-backend-cli` tool and uses Docker containers in o
         `docker run -d -e INVENTORY='device_type:beaglebone,image_id:fake-device' -e FAIL='error msg' --network=integration_mender -t fake-client`
 
 - And of course, to make multiple fake clients (without docker compose):
-- 
+
     - Using zsh: `repeat 10 { docker run -d -e INVENTORY='device_type:beaglebone' --network=integration_mender -t fake-client }`
 
 
