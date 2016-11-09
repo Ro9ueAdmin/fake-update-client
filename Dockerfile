@@ -7,5 +7,6 @@ RUN git clone https://github.com/mendersoftware/mender-backend-cli.git && cd men
 ADD . /script
 ENV DEVICE ${DEVICE}
 ENV FAIL ${FAIL}
+ENV GATEWAY ${GATEWAY}
 
 ENTRYPOINT ["python3", "fake-update-client.py"]

@@ -19,7 +19,7 @@ class Args(dict):
 # The mender-backend-cli is expecting CLI arguments, the following sets the required arguments.
 args = Args()
 args.device_key = "key"
-args.service = "https://docker.mender.io/"
+args.service = os.environ.get("GATEWAY", "https://docker.mender.io")
 args.mac_address = ":".join(["%02x" % random.randint(0x00, 0xFF) for i in range(6)])
 args.verify = False
 args.tenant_token = "dummy"
